@@ -27,7 +27,7 @@ public class Main {
 
     List<Product> productListWithDiscount = products.stream()
         .filter(p -> (p.getType().equals(ProductTypes.BOOK) && p.isDiscountPossibility()))
-        .map(p -> new Product(p.getType(),
+        .peek(p -> new Product(p.getType(),
             p.getPrice() * 0.9, p.isDiscountPossibility(), p.getDate()))
         .collect(Collectors.toList());
     System.out.println("------------------------------");
