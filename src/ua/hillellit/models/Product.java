@@ -32,6 +32,9 @@ private LocalDate date;
   public Double getPrice() {
     return price;
   }
+    public void setPrice(Double price) {
+      this.price = price;
+    }
 
   public boolean isDiscountPossibility() {
     return discountPossibility;
@@ -46,4 +49,7 @@ private LocalDate date;
       return 1;
     return -1;
   }
+
 }
+
+
